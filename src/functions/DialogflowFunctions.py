@@ -17,6 +17,7 @@ def handler_InicioChat(responseId: str):
     connection = get_db_connection()
     cursor = connection.cursor()
     
+    ## Once we have the database table create we can start fetching information from this one
     try:
         cursor.execute("SELECT * FROM tabla_responsesId WHERE response_id = %s", (responseId,))
         result = cursor.fetchone()
