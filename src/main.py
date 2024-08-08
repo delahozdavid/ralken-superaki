@@ -25,4 +25,4 @@ async def webhook(request: Request):
 @app.post('/webhook-servicio-cliente', description="Webhook para servicio al cliente")
 async def webhook(request: Request):
     request_data = await request.json()
-    webhook_request = DialogflowPOST(**request_data) 
+    webhook_request = DialogflowPOST(**request_data)

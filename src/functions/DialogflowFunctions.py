@@ -47,7 +47,7 @@ def handler_InicioChat(responseId: str):
                     }
             
     except Exception as error:
-        return "En estos momentos estamos teniendo un inconveniente en nuestro bot, por favor contactar mas tarde"
+        return f"No pude conectarte a la base de datos error: {error}"
     
     finally: 
         # Close connection to database
