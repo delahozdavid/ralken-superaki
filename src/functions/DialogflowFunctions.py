@@ -9,13 +9,13 @@ async def capitalHumanoFunc(responseId: str, queryResult: Dict[str, Any]):
     async with get_db_connection() as connection:
         async with connection.cursor() as cursor:
             if intent_name == 'Inicio-Chat':
-                return await handler_InicioChat(responseId, connection, cursor)
+                return await handler_InicioChat(responseId, cursor)
             elif intent_name == 'name_notrelated':
                 return await handler_nameNotRelated(responseId, queryResult, cursor, connection)
             elif intent_name == 'Inicio-Nombre':
-                return await handler_InicioNombre(responseId, queryResult, cursor, connection)
+                return await handler_InicioNombre(responseId, queryResult, cursor)
             elif intent_name == 'proceso_seleccion':
-                return await handler_ProcesoSeleccion(queryResult, cursor, connection)
+                return await handler_ProcesoSeleccion(queryResult, cursor)
     
     
 
