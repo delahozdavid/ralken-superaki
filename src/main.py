@@ -1,4 +1,4 @@
-from fastapi import FastAPI, jsonify, Request
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from classes.classes import DialogflowPOST
 from functions.DialogflowFunctions import capitalHumanoFunc
